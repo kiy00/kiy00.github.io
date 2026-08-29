@@ -8,6 +8,9 @@ h1{font-size:26px;margin:28px 0 8px;line-height:1.5}
 h2{font-size:20px;margin:40px 0 12px;padding-left:10px;border-left:4px solid var(--red)}
 h3{font-size:17px;margin:24px 0 8px}
 p{margin:12px 0}
+ul,ol{padding-left:1.5em;margin:12px 0}
+li{margin:6px 0}
+.appstore-badge{height:56px;width:auto}
 .lead{color:var(--gray);font-size:15px}
 figure{margin:20px 0;text-align:center}
 figure img{max-width:320px;width:100%;border:1px solid #e5decf;border-radius:8px;background:#fff}
