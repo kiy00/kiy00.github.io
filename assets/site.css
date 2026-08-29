@@ -1,6 +1,8 @@
-:root{--paper:#f7f3e9;--ink:#1c1a17;--gray:#6e695f;--red:#b3402e;--card:#fffdf6}
+:root{--paper:#fafafa;--ink:#1a1c1e;--gray:#63676c;--red:#3b6ea5;--card:#ffffff;--serif:"Hiragino Sans","Yu Gothic",sans-serif}
+/* アプリ別テーマ: 色とフォントのトークンだけ上書き */
+body.theme-omotegaki{--paper:#f7f3e9;--ink:#1c1a17;--gray:#6e695f;--red:#b3402e;--card:#fffdf6;--serif:"Hiragino Mincho ProN","Yu Mincho",serif}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;background:var(--paper);color:var(--ink);line-height:1.9}
+body{font-family:var(--serif);background:var(--paper);color:var(--ink);line-height:1.9}
 .wrap{max-width:720px;margin:0 auto;padding:24px 20px 80px}
 header.site{padding:14px 0;border-bottom:1px solid #e5decf;font-size:14px}
 header.site a{color:var(--gray);text-decoration:none}
