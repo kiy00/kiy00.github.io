@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- 記事テンプレート(PLAYBOOK§8参照)。__X__を置換して guide/<slug>/index.html へ。
+     必須チェック: title=検索クエリ一致/description120字前後/canonical/OGP/
+     Smart App Banner/FAQ JSON-LD/見本画像にはwidth,height,loading=lazy/
+     ストアリンクは必ず ?ct=seo_<slug>/出典リンク(マナー系は一次確認済みのもの) -->
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>__検索クエリ一致のタイトル__【見本つき】</title>
+<meta name="description" content="__120字前後・結論を含める__">
+<link rel="canonical" href="https://kiy00.com/__app__/guide/__slug__/">
+<meta property="og:title" content="__タイトル同上__">
+<meta property="og:image" content="https://kiy00.com/__app__/img/__主画像__.png">
+<meta name="apple-itunes-app" content="app-id=__APPLE_ID__">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"__Q1__","acceptedAnswer":{"@type":"Answer","text":"__A1__"}}]}
+</script>
+</head>
+<body class="theme-__app__">
+<div class="wrap">
+<header class="site"><a href="/">ホーム</a> › <a href="/__app__/">__アプリ名__</a> › __短い記事名__</header>
+
+<h1>__タイトル(結論を含む)__</h1>
+<p class="lead">__読者の状況→この記事で分かること(2文)__</p>
+
+<h2>__結論の節(先出し)__</h2>
+<figure><img src="/__app__/img/__見本__.png" alt="__具体的なalt__" width="320" height="564" loading="lazy"><figcaption>__見本の説明__</figcaption></figure>
+
+<!-- 表(早見表があると強い) / .note で補足 -->
+
+<!-- CTAカード(LPの.cta-appブロックをコピーし ct=seo___slug__ に変更) -->
+
+<h2>よくある質問</h2>
+<dl class="faq"><dt>Q. __Q1__</dt><dd>A. __A1__</dd></dl>
+
+<!-- 関連ガイド: tools/update_links.py が自動生成するので書かない -->
+<footer>
+<p>参考: <a href="__出典URL__" rel="nofollow">__出典名__</a></p>
+<p><a href="/__app__/">アプリ「__アプリ名__」について</a> ・ <a href="/">kiy00.com</a></p>
+</footer>
+</div>
+</body>
+</html>
