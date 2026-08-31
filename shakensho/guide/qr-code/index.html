@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>車検証の二次元コードには何が入っている?【国交省仕様で解説】</title>
+<meta name="description" content="電子車検証の右下には5つの二次元コード(2分割+3分割の連結QR)が印字され、ナンバー・車台番号・型式・燃料などが読み取れます。ただし券面のコードに車検満了日は入っていません。国交省の公開仕様に基づいて中身を解説。">
+<link rel="canonical" href="https://kiy00.com/shakensho/guide/qr-code/">
+<meta property="og:title" content="車検証の二次元コードには何が入っている?">
+<meta property="og:image" content="https://kiy00.com/shakensho/img/qr-face.png">
+<meta name="apple-itunes-app" content="app-id=6806559559">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"車検証の二次元コードを普通のQRリーダーで読むと文字化けします。なぜ?","acceptedAnswer":{"@type":"Answer","text":"車検証の二次元コードは複数のシンボルを連結して1つのデータにする「連結QR」形式で、1個だけ読んでも断片しか得られません。コード2は2分割、コード3は3分割で、5つすべてを読み取って結合する必要があります。"}},
+{"@type":"Question","name":"二次元コードから車検満了日は分かりますか?","acceptedAnswer":{"@type":"Answer","text":"車検証の券面のコードでは分かりません(仕様上、満了日欄は未設定の固定値)。一方、車検証と一緒に交付される自動車検査証記録事項のコードには満了日が実値で入っています。"}}]}
+</script>
+</head>
+<body class="theme-shakensho">
+<div class="wrap">
+<header class="site"><a href="/">ホーム</a> › <a href="/shakensho/">車検証ガレージ</a> › 二次元コードの中身</header>
+
+<h1>車検証の二次元コードには何が入っている? — 国交省の公開仕様で解説</h1>
+<p class="lead">電子車検証の右下に並ぶ5つの二次元コード。あれは飾りではなく、車両情報の塊です。国土交通省が公開している項目定義書に基づいて、中身を正確に解説します。</p>
+
+<h2>結論: 「2分割+3分割」の連結QRに、券面情報+αが入っている</h2>
+<p>右下の5つのコードは、実は2組です。<strong>二次元コード2(2分割)</strong>と<strong>二次元コード3(3分割)</strong>で、それぞれ複数シンボルを連結して初めて1つのデータになります(だから普通のQRリーダーで1個だけ読むと断片しか出ません)。</p>
+<table>
+<tr><th>コード</th><th>分割数</th><th>主な中身</th></tr>
+<tr><td>二次元コード2</td><td>2個</td><td>自動車登録番号(ナンバー)・車台番号・原動機型式 など</td></tr>
+<tr><td>二次元コード3</td><td>3個</td><td>型式・初度登録年月・燃料の種類・軸重・騒音規制・型式指定番号・<strong>有効期間の満了する日(※)</strong> など19項目</td></tr>
+</table>
+<p class="note">※ここに重要な注意があります。<strong>券面のコードでは満了日欄は「999999」(未設定)の固定値</strong>と仕様で定められています。電子車検証は車検を受けても券面を刷り直さないため、変わる情報は入れられないのです。</p>
+<figure><img src="/shakensho/img/qr-face.png" alt="車検証の券面パターンの連結QR構成図(満了日は未設定)" width="640" height="440" loading="lazy"><figcaption>券面パターン: コード2(2分割)+コード3(3分割)。満了日は未設定(図は架空データによる再現)</figcaption></figure>
+
+<h2>満了日入りのコードは「記録事項」の方</h2>
+<p>同じ仕様の二次元コードでも、車検証と一緒に交付される<a href="/shakensho/guide/kiroku-jiko/">自動車検査証記録事項</a>と、閲覧アプリの画面に表示されるコードには<strong>満了日が実値(西暦下2桁+月日)で入ります</strong>。つまり「二次元コードで満了日を取り込みたい」なら、読むべきは券面ではなく記録事項です。</p>
+<figure><img src="/shakensho/img/qr-record.png" alt="自動車検査証記録事項パターンの連結QR構成図(満了日入り)" width="640" height="440" loading="lazy"><figcaption>記録事項パターン: 満了日が実値で入る(図は架空データによる再現)</figcaption></figure>
+
+<h2>読み取りには連結QR対応のリーダーが必要</h2>
+<p>連結QRを正しく結合・解釈できる読み取り機能を持つアプリなら、カメラをかざすだけで車両情報を構造化して取り込めます。アプリ「車検証ガレージ」は券面・記録事項の両パターンに対応し(カメラ・写真・PDF)、記録事項からは満了日込みで登録、以後90日・30日・7日前に通知します。</p>
+<div class="cta"><div class="cta-app">
+<img class="icon" src="/shakensho/img/appicon.png" alt="車検証ガレージのアイコン" width="84" height="84">
+<div class="meta">
+<div class="name">車検証ガレージ — 読み取り・満了日リマインダー</div>
+<div class="desc">スキャンで登録、満了日は90・30・7日前に通知。無料・広告なし。</div>
+<a href="https://apps.apple.com/jp/app/id6806559559?ct=seo_qr-code"><img class="appstore-badge" src="/assets/appstore-badge.svg" alt="App Storeでダウンロード" width="120" height="40"></a>
+</div></div></div>
+
+<h2>よくある質問</h2>
+<dl class="faq">
+<dt>Q. 二次元コードに個人情報は入っていますか?</dt>
+<dd>A. 券面のコード2・3には氏名や住所は入っていません(登録番号・車台番号・車両スペック等)。ただし車台番号等は車両を特定できる情報なので、SNSへの投稿などには注意してください。</dd>
+<dt>Q. 旧様式(紙)の車検証にも二次元コードはありますか?</dt>
+<dd>A. あります。様式は近いですが、旧様式では満了日を含む構成が異なります。本記事は2023年1月以降の電子車検証(2023.1版仕様)の解説です。</dd>
+</dl>
+
+<h2>関連ガイド</h2>
+<ul>
+<li><a href="/shakensho/guide/shaken-manryobi/">車検満了日の確認方法4つ — どこに書いてある?</a></li>
+<li><a href="/shakensho/guide/denshi-shakensho-mikata/">電子車検証の見方 — 有効期限が券面にない理由</a></li>
+<li><a href="/shakensho/guide/yomitori-dekinai/">車検証閲覧アプリで読み取りできない時の対処法</a></li>
+<li><a href="/shakensho/guide/kiroku-jiko/">自動車検査証記録事項とは — もらえる場所と再発行</a></li>
+<li><a href="/shakensho/">アプリで車検満了日を管理する(無料)</a></li>
+</ul>
+
+<footer>
+<p>参考: <a href="https://www.denshishakensho-portal.mlit.go.jp/assets/files/Two-dimensional_code_item_definition.pdf" rel="nofollow">国土交通省 二次元コード項目定義書(PDF)</a> ・ <a href="https://www.denshishakensho-portal.mlit.go.jp/" rel="nofollow">電子車検証特設サイト</a></p>
+<p><a href="/shakensho/">アプリ「車検証ガレージ」について</a> ・ <a href="/">kiy00.com</a></p>
+</footer>
+</div>
+</body>
+</html>

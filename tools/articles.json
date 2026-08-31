@@ -2,11 +2,53 @@
   "omotegaki": {
     "apple_id": "6806079105",
     "articles": [
-      {"slug": "kouden-fuufu-renmei", "title": "香典袋の夫婦連名の書き方【見本つき】"},
-      {"slug": "nakabukuro-kanji", "title": "中袋の金額の書き方 — 大字早見表"},
-      {"slug": "goreizen-gobutsuzen", "title": "御霊前と御仏前の違い"},
-      {"slug": "noshibukuro-namae", "title": "のし袋・ご祝儀袋の名前の書き方"},
-      {"slug": "renmei-besshi", "title": "4名以上の連名と別紙の作り方"}
+      {
+        "slug": "kouden-fuufu-renmei",
+        "title": "香典袋の夫婦連名の書き方【見本つき】"
+      },
+      {
+        "slug": "nakabukuro-kanji",
+        "title": "中袋の金額の書き方 — 大字早見表"
+      },
+      {
+        "slug": "goreizen-gobutsuzen",
+        "title": "御霊前と御仏前の違い"
+      },
+      {
+        "slug": "noshibukuro-namae",
+        "title": "のし袋・ご祝儀袋の名前の書き方"
+      },
+      {
+        "slug": "renmei-besshi",
+        "title": "4名以上の連名と別紙の作り方"
+      }
+    ]
+  },
+  "shakensho": {
+    "apple_id": "6806559559",
+    "guide_heading": "車検証ガイド",
+    "related_cta": "アプリで車検満了日を管理する(無料)",
+    "articles": [
+      {
+        "slug": "shaken-manryobi",
+        "title": "車検満了日の確認方法4つ — どこに書いてある?"
+      },
+      {
+        "slug": "denshi-shakensho-mikata",
+        "title": "電子車検証の見方 — 有効期限が券面にない理由"
+      },
+      {
+        "slug": "yomitori-dekinai",
+        "title": "車検証閲覧アプリで読み取りできない時の対処法"
+      },
+      {
+        "slug": "kiroku-jiko",
+        "title": "自動車検査証記録事項とは — もらえる場所と再発行"
+      },
+      {
+        "slug": "qr-code",
+        "title": "車検証の二次元コードには何が入っている?"
+      }
     ]
   }
 }

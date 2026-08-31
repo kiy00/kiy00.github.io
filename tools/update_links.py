@@ -15,7 +15,8 @@ for app, cfg in data.items():
         s = open(p).read()
         others = '\n'.join(f'<li><a href="/{app}/guide/{o["slug"]}/">{o["title"]}</a></li>'
                            for o in arts if o['slug'] != a['slug'])
-        block = f'<h2>関連ガイド</h2>\n<ul>\n{others}\n<li><a href="/{app}/">アプリでなぞって書く(無料)</a></li>\n</ul>'
+        cta = cfg.get('related_cta', 'アプリでなぞって書く(無料)')
+        block = f'<h2>関連ガイド</h2>\n<ul>\n{others}\n<li><a href="/{app}/">{cta}</a></li>\n</ul>'
         if '<h2>関連ガイド</h2>' in s:
             s = re.sub(r'<h2>関連ガイド</h2>\s*<ul>.*?</ul>', block, s, flags=re.S)
         else:
@@ -26,7 +27,8 @@ for app, cfg in data.items():
     if os.path.exists(lp):
         s = open(lp).read()
         lis = '\n'.join(f'<li><a href="/{app}/guide/{a["slug"]}/">{a["title"]}</a></li>' for a in arts)
-        s = re.sub(r'(<h2>書き方ガイド</h2>\s*<ul>).*?(</ul>)', r'\1\n' + lis + r'\n\2', s, flags=re.S)
+        heading = cfg.get('guide_heading', '書き方ガイド')
+        s = re.sub(r'(<h2>' + re.escape(heading) + r'</h2>\s*<ul>).*?(</ul>)', r'\1\n' + lis + r'\n\2', s, flags=re.S)
         open(lp, 'w').write(s)
 open('sitemap.xml','w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     + '\n'.join(f'<url><loc>{u}</loc></url>' for u in urls) + '\n</urlset>\n')
