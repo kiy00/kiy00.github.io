@@ -2,6 +2,7 @@
 /* アプリ別テーマ: 色とフォントのトークンだけ上書き */
 body.theme-omotegaki{--paper:#f7f3e9;--ink:#1c1a17;--gray:#6e695f;--red:#b3402e;--card:#fffdf6;--serif:"Hiragino Mincho ProN","Yu Mincho",serif}
 *{margin:0;padding:0;box-sizing:border-box}
+body.theme-shakensho{--paper:#f2f5f9;--ink:#0d2b4f;--gray:#5a6b7e;--red:#2fa45b;--card:#ffffff;--serif:"Hiragino Sans","Yu Gothic",sans-serif}
 body{font-family:var(--serif);background:var(--paper);color:var(--ink);line-height:1.9}
 .wrap{max-width:720px;margin:0 auto;padding:24px 20px 80px}
 header.site{padding:14px 0;border-bottom:1px solid #e5decf;font-size:14px}
