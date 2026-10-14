@@ -1,11 +1,11 @@
 {
-    "name": "gtd",
-    "short_name": "gtd",
+    "name": "GTD",
+    "short_name": "GTD",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#131318",
+    "theme_color": "#131318",
+    "description": "個人用 GTD",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

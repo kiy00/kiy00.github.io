@@ -22,7 +22,6 @@
 
   <!-- iOS meta tags & icons -->
   <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="gtd">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
@@ -31,6 +30,13 @@
 
   <title>gtd</title>
   <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FBF8FF">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#131318">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <style>
+    html, body { background: #FBF8FF; }
+    @media (prefers-color-scheme: dark) { html, body { background: #131318; } }
+  </style>
 </head>
 <body>
   <script src="flutter_bootstrap.js" async></script>
